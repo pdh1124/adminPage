@@ -5,6 +5,8 @@ public class SearchParam {
     private String email;
     private int page;
 
+    //{ "account" : "", "email" : "", "page" : 0}
+
     //해당 파라미터를 받기 위해서는 get,set메소드와 생성자가 있어야 함
     public String getAccount() {
         return account;
