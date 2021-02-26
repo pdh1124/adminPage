@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 //이곳으로 들어올 API주소를 MAPPING하기 위해서 그리고 ()안에는 어떠한 주소로 받을 것인지에 대해서 주소를 넣게 되어있다.
 //api로 받을 예정이기에 api로 지정함
-@RequestMapping("/api") // Localhost:8080/api까지 주소가 매칭 됨
+@RequestMapping("/api") // Localhost:8080/api까지 주소가 매칭 됨 ()안에는 어떠한 주소에 맵핑을 시킬건지
 
 public class GetController {
 
