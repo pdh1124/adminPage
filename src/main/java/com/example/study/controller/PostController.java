@@ -23,4 +23,18 @@ public class PostController {
         return searchParam;
 
     }
+
+
+    //PUT/PATCH Method
+    //간단하게는 스프링 부트에서 제공한다.
+    //PutMapping이란게 존재(스프링 부트에서 제공)
+    @PutMapping
+    public void put("/putMethod") {
+
+    }
+    //PathMapping이란것도 존재(스프링 부트에서 제공)
+    @PatchMapping
+    public void patch("/patchMethod") {
+
+    }
 }
