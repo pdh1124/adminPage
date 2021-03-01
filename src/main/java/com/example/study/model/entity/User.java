@@ -17,8 +17,9 @@ import java.time.LocalDateTime;
 @Data //객체로 사용할 것이기 때문에 기본생성자와 변수에 대해서 get,set의 메소드를 만들어 주고
 @AllArgsConstructor //모든 매개변수르 가지는 생성자까지 추가
 
-//@Table(name="user") //이것은 entity지만 클래스의 이름과 테이블의 이름이 서로 동일하다면 굳이 테이블이라는것을 선언하지 않아도 됨
+
 @Entity
+//@Table(name="user") //이것은 entity지만 클래스의 이름과 테이블의 이름이 서로 동일하다면 굳이 테이블이라는것을 선언하지 않아도 됨
 public class User { //User의 이름은 DB에 Table과 이름이 동일 하면 됨
 
     @Id //식별자에 대한것은 @Id를 붙여줘야 함
@@ -40,6 +41,10 @@ public class User { //User의 이름은 DB에 Table과 이름이 동일 하면 �
     private LocalDateTime updatedAt;
 
     private String updatedBy;
+
+    public User() {
+
+    }
 
     /*
     자바에서 DB로 연결할 때 MySQL에서는 Snake Case로 작성을 하고 자바에서늕 camel Case로 작성을 해도
