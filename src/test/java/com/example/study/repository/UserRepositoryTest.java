@@ -3,7 +3,7 @@ package com.example.study.repository;
 
 import com.example.study.StudyApplicationTests;
 import com.example.study.model.entity.User;
-import com.sun.tools.javac.util.Assert;
+import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+
+
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+@Test
 public class UserRepositoryTest extends StudyApplicationTests {
 
     //레파지토리로 CRUD를 테스트 할것이기 때문에
@@ -91,7 +93,7 @@ public class UserRepositoryTest extends StudyApplicationTests {
     public void delete() {
         Optional<User> user = userRepository.findById(2L);
 
-        Assert.assertTrue(user.isPresent());
+        //2L 이라는 것을 셀렉터를 했을때 반드시 데이터가 존재해야하기 때문에
 
 
         user.ifPresent(selectUser -> {
